@@ -17,8 +17,8 @@
 
         <ImageView
             android:layout_width="@dimen/dp_50"
-            android:layout_gravity="center"
             android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
             android:src="@drawable/ic_person_outline"/>
 
         <View
@@ -48,8 +48,8 @@
 
         <ImageView
             android:layout_width="@dimen/dp_50"
-            android:layout_gravity="center"
             android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
             android:src="@drawable/ic_lock_outline"/>
 
         <View
@@ -64,6 +64,7 @@
             android:layout_weight="1"
             android:background="@null"
             android:hint="@string/input_password"
+            android:inputType="textPassword"
             android:paddingLeft="@dimen/dp_20"/>
     </LinearLayout>
 

@@ -32,7 +32,7 @@
             android:layout_height="@dimen/dp_50"
             android:layout_weight="1"
             android:background="@null"
-            android:hint="@string/account_name"
+            android:hint="@string/input_phone_number"
             android:paddingLeft="@dimen/dp_20"/>
     </LinearLayout>
 
@@ -105,6 +105,14 @@
             android:layout_weight="1"
             android:background="@null"
             android:hint="@string/input_password"
+            android:inputType="textPassword"
             android:paddingLeft="@dimen/dp_20"/>
+
+        <ImageView
+            android:id="@+id/img_check"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_eye"/>
     </LinearLayout>
 </LinearLayout>

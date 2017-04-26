@@ -7,4 +7,5 @@
     <string name="account_name">手机号/用户名</string>
     <string name="input_password">请输入密码</string>
     <string name="verification_code">输入验证码</string>
+    <string name="input_phone_number">请输入手机号</string>
 </resources>
