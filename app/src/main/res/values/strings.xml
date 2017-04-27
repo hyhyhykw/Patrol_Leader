@@ -16,4 +16,9 @@
     <string name="main_message">消息</string>
     <string name="main_setting">设置</string>
     <string name="audit_scheme">待审核的计划</string>
+    <string-array name="item_main_title">
+        <item>正在执行的任务</item>
+        <item>待派发的任务</item>
+        <item>待审批的任务</item>
+    </string-array>
 </resources>
