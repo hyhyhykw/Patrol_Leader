@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 
-import com.hy.patrol_leader.MyApplication;
+import com.hy.patrol_leader.main.MyApplication;
 import com.hy.patrol_leader.dao.LogWrapper;
 
 import java.lang.ref.WeakReference;

@@ -49,9 +49,11 @@ public class RegisterFragment extends BaseFragment {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN://显示密码
                         mEdtPwd.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                        mEdtPwd.setSelection(mEdtPwd.getText().length());
                         return true;
                     case MotionEvent.ACTION_UP://隐藏密码
                         mEdtPwd.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                        mEdtPwd.setSelection(mEdtPwd.getText().length());
                         return true;
                 }
                 return false;

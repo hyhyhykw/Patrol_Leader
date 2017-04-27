@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.hy.patrol_leader.R;
 import com.hy.patrol_leader.base.BaseActivity;
+import com.hy.patrol_leader.main.MainActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -26,6 +27,8 @@ public class LoginActivity extends BaseActivity {
     private RegisterFragment mRegisterFragment;
     private Fragment mCurrentFragment;//当前显示的Fragment
 
+    private boolean isLogin = true;//判断是否点击的是登录
+
     @Override
     protected void init() {
         retrieveFragment();
@@ -41,6 +44,8 @@ public class LoginActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_login:
+                isLogin = true;
+
                 mCursor1.setVisibility(View.VISIBLE);
                 mCursor2.setVisibility(View.INVISIBLE);
 
@@ -49,6 +54,7 @@ public class LoginActivity extends BaseActivity {
                 switchFragment(mLoginFragment);
                 break;
             case R.id.tv_register:
+                isLogin = false;
                 mCursor1.setVisibility(View.INVISIBLE);
                 mCursor2.setVisibility(View.VISIBLE);
 
@@ -57,6 +63,12 @@ public class LoginActivity extends BaseActivity {
                 switchFragment(mRegisterFragment);
                 break;
             case R.id.btn_login:
+                if (isLogin) {
+                    // TODO: 2017/4/27 登录逻辑
+                    toActivity(MainActivity.class);
+                } else {
+                    // TODO: 2017/4/27 注册逻辑
+                }
                 break;
             default:
                 throw new UnsupportedOperationException("Unsupport Operation");

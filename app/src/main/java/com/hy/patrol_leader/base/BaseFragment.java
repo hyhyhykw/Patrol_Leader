@@ -1,5 +1,7 @@
 package com.hy.patrol_leader.base;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
@@ -19,7 +21,7 @@ import butterknife.Unbinder;
  */
 
 public abstract class BaseFragment extends Fragment {
-
+    private static final String EXTRA_KEY_STRING = "bundle";
     private Unbinder mUnbinder;
 
     @Nullable
@@ -56,4 +58,40 @@ public abstract class BaseFragment extends Fragment {
         mUnbinder.unbind();
         mUnbinder = null;
     }
+
+    /**
+     * skip to other activity
+     *
+     * @param cla class object  where you want skip
+     */
+    public void toActivity(Class<?> cla) {
+        toActivity(cla, null, null);
+    }
+
+    /**
+     * skip to other activity and take extra data
+     *
+     * @param cla    class object  where you want skip
+     * @param bundle extra bundle data
+     */
+    public void toActivity(Class<?> cla, Bundle bundle) {
+        toActivity(cla, bundle, null);
+    }
+
+    /**
+     * skip to other activity and take extra data and uri data
+     *
+     * @param cla    class object  where you want skip
+     * @param bundle extra bundle data
+     * @param data   uri data
+     */
+    public void toActivity(Class<?> cla, Bundle bundle, Uri data) {
+        Intent intent = new Intent(getContext(), cla);
+        if (null != bundle)
+            intent.putExtra(EXTRA_KEY_STRING, bundle);
+        if (null != data)
+            intent.setData(data);
+        startActivity(intent);
+    }
+
 }

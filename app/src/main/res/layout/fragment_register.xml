@@ -28,12 +28,8 @@
 
         <EditText
             android:id="@+id/edt_register_username"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dp_50"
-            android:layout_weight="1"
-            android:background="@null"
-            android:hint="@string/input_phone_number"
-            android:paddingLeft="@dimen/dp_20"/>
+            style="@style/login_edt_style"
+            android:hint="@string/input_phone_number"/>
     </LinearLayout>
 
     <LinearLayout
@@ -58,12 +54,8 @@
 
         <EditText
             android:id="@+id/edt_register_code"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dp_50"
-            android:layout_weight="1"
-            android:background="@null"
-            android:hint="@string/verification_code"
-            android:paddingLeft="@dimen/dp_20"/>
+            style="@style/login_edt_style"
+            android:hint="@string/verification_code"/>
 
         <View
             android:layout_width="0.5dp"
@@ -100,13 +92,9 @@
 
         <EditText
             android:id="@+id/edt_register_password"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dp_50"
-            android:layout_weight="1"
-            android:background="@null"
+            style="@style/login_edt_style"
             android:hint="@string/input_password"
-            android:inputType="textPassword"
-            android:paddingLeft="@dimen/dp_20"/>
+            android:inputType="textPassword"/>
 
         <ImageView
             android:id="@+id/img_check"

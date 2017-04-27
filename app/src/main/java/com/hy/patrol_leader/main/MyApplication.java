@@ -1,4 +1,4 @@
-package com.hy.patrol_leader;
+package com.hy.patrol_leader.main;
 
 import android.app.Application;
 
