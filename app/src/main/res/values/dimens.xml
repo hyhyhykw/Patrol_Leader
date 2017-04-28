@@ -54,4 +54,5 @@
 
     <dimen name="font_small_fixed">12dp</dimen>
     <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_84">84dp</dimen>
 </resources>
